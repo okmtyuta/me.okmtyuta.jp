@@ -1,7 +1,6 @@
 'use client'
 import { Button, Fixed, TextField } from '@okmtyuta/amatelas/server'
 import { ClientAlert } from '@okmtyuta/amatelas/client'
-import { redirect } from 'next/navigation'
 import { useState } from 'react'
 
 const Login = () => {
