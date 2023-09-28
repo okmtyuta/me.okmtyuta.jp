@@ -6,7 +6,7 @@ type ResponseBody = { access_token: string }
 export async function POST(request: NextRequest) {
   const body: RequestBody = await request.json()
 
-  const result = await fetch('http://localhost:3001/auth/login', {
+  const result = await fetch(`${process.env.AUTH_URL}/auth/login`, {
     method: 'POST',
     body: JSON.stringify({ username: body.username, password: body.password }),
     headers: {
