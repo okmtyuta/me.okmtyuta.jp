@@ -1,5 +1,5 @@
 'use client'
-import {  Fixed, TextField } from '@okmtyuta/amatelas/server'
+import { Fixed, TextField } from '@okmtyuta/amatelas/server'
 import { ClientAlert } from '@okmtyuta/amatelas/client'
 import { useState } from 'react'
 
@@ -12,7 +12,7 @@ const Login = () => {
   const [alerts, setAlerts] = useState<{ label: string; content: string; key: string; variant: 'success' | 'error' }[]>(
     []
   )
-  const [accessToken, setAccessToken] = useState<string>()
+  const [accessToken, setAccessToken] = useState<string>('未取得')
   return (
     <div>
       <Fixed positionalMargin={{ x: 'none' }}>
@@ -59,6 +59,7 @@ const Login = () => {
         </div>
         <LabelButton
           onClick={async () => {
+            setAccessToken("取得中...")
             const response = await fetch('/login/api', {
               method: 'POST',
               headers: {
@@ -75,7 +76,7 @@ const Login = () => {
                   { label: 'ERROR', content: 'Authentication Failed', key: crypto.randomUUID(), variant: 'error' }
                 ]
               })
-              setAccessToken(undefined)
+              setAccessToken('取得失敗')
             }
 
             if (data.ok) {
@@ -95,7 +96,7 @@ const Login = () => {
       </form>
 
       <div>アクセストークンは</div>
-      <div className={styles['access-token']}>{accessToken ?? '取得中...'}</div>
+      <div className={styles['access-token']}>{accessToken}</div>
       <div>です。</div>
     </div>
   )
