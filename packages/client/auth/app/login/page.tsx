@@ -56,7 +56,7 @@ const Login = () => {
             body: JSON.stringify({ username, password })
           })
           const data: { ok: false } | { ok: true; access_token: string } = await response.json()
-
+console.log(data)
           if (data.ok) {
             redirect('https://github.com')
           }
