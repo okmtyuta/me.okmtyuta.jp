@@ -1,4 +1,4 @@
-pre-push: format lint build collect
+pre-push: format lint build
 
 lint:
 	pnpm lint
