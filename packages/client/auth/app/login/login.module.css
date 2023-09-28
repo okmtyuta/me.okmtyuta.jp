@@ -1,1 +1,9 @@
+.inputs {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
 
+.access-token {
+  overflow: scroll;
+  padding: 16px;
+}
