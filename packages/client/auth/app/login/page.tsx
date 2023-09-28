@@ -1,10 +1,10 @@
 'use client'
 import { Fixed, TextField } from '@okmtyuta/amatelas/server'
 import { ClientAlert } from '@okmtyuta/amatelas/client'
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 
 import styles from './login.module.css'
-import { LabelButton } from '@okmtyuta/amatelas'
+import { LabelButton, Progress } from '@okmtyuta/amatelas'
 
 const Login = () => {
   const [username, setUsername] = useState<string>()
@@ -12,7 +12,7 @@ const Login = () => {
   const [alerts, setAlerts] = useState<{ label: string; content: string; key: string; variant: 'success' | 'error' }[]>(
     []
   )
-  const [accessToken, setAccessToken] = useState<string>('未取得')
+  const [accessToken, setAccessToken] = useState<ReactNode>('未取得')
   return (
     <div>
       <Fixed positionalMargin={{ x: 'none' }}>
@@ -59,7 +59,7 @@ const Login = () => {
         </div>
         <LabelButton
           onClick={async () => {
-            setAccessToken("取得中...")
+            setAccessToken(<Progress />)
             const response = await fetch('/login/api', {
               method: 'POST',
               headers: {
