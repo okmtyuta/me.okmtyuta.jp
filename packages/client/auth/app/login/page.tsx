@@ -20,7 +20,6 @@ const Login = () => {
                     return dalert.key !== alert.key
                   })
                 })
-                console.log(alerts)
               }}
               key={alert.key}
               variant="error"
@@ -32,6 +31,7 @@ const Login = () => {
         })}
       </Fixed>
       <TextField
+        helper="alice"
         onChange={(e) => {
           setUsername(e.target.value)
         }}
@@ -39,6 +39,7 @@ const Login = () => {
         variant="filled"
       />
       <TextField
+        helper="p@ssw0rd"
         onChange={(e) => {
           setPassword(e.target.value)
         }}
@@ -56,10 +57,6 @@ const Login = () => {
             body: JSON.stringify({ username, password })
           })
           const data: { ok: false } | { ok: true; access_token: string } = await response.json()
-console.log(data)
-          if (data.ok) {
-            redirect('https://github.com')
-          }
 
           if (!data.ok) {
             setAlerts((current) => {
