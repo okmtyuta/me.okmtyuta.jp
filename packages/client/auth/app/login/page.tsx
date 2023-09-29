@@ -10,7 +10,7 @@ import styles from './login.module.css'
 type Alerts = { label: string; content: string; key: string; variant: 'success' | 'error' }[]
 
 const Login = () => {
-  const callbackURL = useSearchParams().get('callback') ?? "https://auth.me.okmtyuta.jp"
+  const callbackURL = useSearchParams().get('callback') ?? 'https://auth.me.okmtyuta.jp'
   const [logined, setLogined] = useState<boolean>(false)
 
   if (logined) {

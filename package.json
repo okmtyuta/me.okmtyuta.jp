@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:auth": "pnpm --filter @okmtyuta/me-auth build",
-    "start:auth": "pnpm --filter @okmtyuta/me-auth start:prod"
+    "build:auth:client": "pnpm --filter @okmtyuta/auth.me.okmtyuta.jp build",
+    "build:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp build",
+    "build:auth": "pnpm build:auth:client && build:auth:api",
+    "start:auth": "pnpm --filter @okmtyuta/me-auth start:prod",
+    "format": "prettier --write ./",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "keywords": [],
   "author": "",
