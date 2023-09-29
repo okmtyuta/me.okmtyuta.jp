@@ -11,6 +11,7 @@
     "lint:auth:client": "pnpm --filter @okmtyuta/auth.me.okmtyuta.jp lint",
     "lint:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp lint",
     "lint:auth": "pnpm lint:auth:api && pnpm lint:auth:client",
+    "lint": "pnpm lint:auth",
     "start:auth:api": "pnpm --filter @okmtyuta/me-auth start:prod",
     "format": "prettier --write ./"
   },
