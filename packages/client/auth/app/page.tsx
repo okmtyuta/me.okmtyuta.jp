@@ -8,7 +8,7 @@ const check = async () => {
   const cookieStore = cookies()
   const accessToken = cookieStore.get('ACCESS_TOKEN')?.value
 
-  const res = await fetch('http://localhost:3000/check/api', {
+  const res = await fetch('https://auth.me.okmtyuta.jp/check/api', {
     method: 'POST',
     cache: 'no-store',
     body: JSON.stringify({
