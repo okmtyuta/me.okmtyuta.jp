@@ -1,14 +1,21 @@
-import { redirect } from 'next/navigation'
-import { cookies } from 'next/headers'
 import Link from 'next/link'
-
 import styles from './index.module.css'
+import { cookies } from 'next/headers'
+import { NextResponse } from 'next/server'
+import { redirect } from 'next/navigation'
+
+type User = {
+  sub: number
+  username: string
+  iat: number
+  exp: number
+}
 
 const check = async () => {
   const cookieStore = cookies()
   const accessToken = cookieStore.get('ACCESS_TOKEN')?.value
 
-  const res = await fetch('https://auth.me.okmtyuta.jp/check/api', {
+  const response = await fetch('http://localhost:3000/profile/api', {
     method: 'POST',
     cache: 'no-store',
     body: JSON.stringify({
@@ -16,20 +23,30 @@ const check = async () => {
     })
   })
 
-  const data = await res.json()
-  return data
+  const data = await response.json()
+
+  return NextResponse.json(data)
 }
 
 const Page = async () => {
-  const accessToken = cookies().get('ACCESS_TOKEN')?.value
-  const data = await check()
-  if (!data.ok) {
-    redirect('/login')
+  const checked = await check()
+
+  const data: {
+    loginRequired: boolean
+    user: User
+  } = await checked.json()
+
+  if (data.loginRequired) {
+    redirect(`/login?callback=${process.env.LOCATION}`)
   }
 
-  const expire = new Date(data.exp * 1000).toString()
+  const user = data.user
+  const accessToken = cookies().get('ACCESS_TOKEN')?.value
+  const expire = new Date(user.exp * 1000).toString()
+
   return (
     <div className={styles['access-token-div']}>
+      <p>{user.username}でログインしています。</p>
       <p>現在のアクセストークンは</p>
       <p className={styles['access-token']}>{accessToken}</p>
       <p>です。このトークンは</p>

@@ -7,7 +7,7 @@ type ResponseBody = { access_token: string }
 export async function POST(request: NextRequest) {
   const body: RequestBody = await request.json()
 
-  const result = await fetch(`${process.env.AUTH_URL}/auth/login`, {
+  const response = await fetch(`${process.env.AUTH_URL}/auth/login`, {
     method: 'POST',
     body: JSON.stringify({ username: body.username, password: body.password }),
     headers: {
@@ -15,11 +15,11 @@ export async function POST(request: NextRequest) {
     }
   })
 
-  if (!result.ok) {
+  if (response.status === 401) {
     return NextResponse.json({ ok: false })
   }
 
-  const data: ResponseBody = await result.json()
+  const data: ResponseBody = await response.json()
   cookies().set('ACCESS_TOKEN', data.access_token)
   return NextResponse.json({ ok: true, ...data })
 }

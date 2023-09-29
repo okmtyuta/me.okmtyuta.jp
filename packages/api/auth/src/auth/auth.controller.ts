@@ -22,13 +22,6 @@ export class AuthController {
   }
 
   @UseGuards(AuthGuard)
-  @HttpCode(HttpStatus.OK)
-  @Get('check')
-  check(@Request() req) {
-    return { ...req.user, ok: true };
-  }
-
-  @UseGuards(AuthGuard)
   @Get('profile')
   getProfile(@Request() req) {
     return req.user;
