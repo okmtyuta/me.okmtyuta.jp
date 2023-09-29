@@ -15,7 +15,7 @@ const check = async () => {
   const cookieStore = cookies()
   const accessToken = cookieStore.get('ACCESS_TOKEN')?.value
 
-  const response = await fetch(`${process.env.AUTH_URL}/profile/api`, {
+  const response = await fetch(`${process.env.LOCATION}/profile/api`, {
     method: 'POST',
     cache: 'no-store',
     body: JSON.stringify({
