@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { cookies } from 'next/headers'
 
 type RequestBody = { username: string; password: string }
 type ResponseBody = { access_token: string }
@@ -19,5 +20,6 @@ export async function POST(request: NextRequest) {
   }
 
   const data: ResponseBody = await result.json()
-  return NextResponse.json({ok:true, ...data})
+  cookies().set('ACCESS_TOKEN', data.access_token)
+  return NextResponse.json({ ok: true, ...data })
 }

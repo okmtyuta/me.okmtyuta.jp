@@ -5,14 +5,16 @@ import { ReactNode, useState } from 'react'
 
 import styles from './login.module.css'
 import { LabelButton, Progress } from '@okmtyuta/amatelas'
+import Link from 'next/link'
 
 const Login = () => {
-  const [username, setUsername] = useState<string>()
-  const [password, setPassword] = useState<string>()
+  const [username, setUsername] = useState<string>('alice')
+  const [password, setPassword] = useState<string>('p@ssw0rd')
   const [alerts, setAlerts] = useState<{ label: string; content: string; key: string; variant: 'success' | 'error' }[]>(
     []
   )
   const [accessToken, setAccessToken] = useState<ReactNode>('未取得')
+
   return (
     <div>
       <Fixed positionalMargin={{ x: 'none' }}>
@@ -45,6 +47,7 @@ const Login = () => {
             }}
             placeholder="username"
             variant="filled"
+            defaultValue={username}
           />
           <TextField
             autoComplete="current-password"
@@ -55,6 +58,7 @@ const Login = () => {
             type="password"
             placeholder="password"
             variant="filled"
+            defaultValue={password}
           />
         </div>
         <LabelButton
@@ -95,9 +99,15 @@ const Login = () => {
         </LabelButton>
       </form>
 
-      <div>アクセストークンは</div>
-      <div className={styles['access-token']}>{accessToken}</div>
-      <div>です。</div>
+      <div className={styles['access-token-div']}>
+        <p>アクセストークンは</p>
+        <p className={styles['access-token']}>{accessToken}</p>
+        <p>です。</p>
+        <p>アクセストークンが表示されてから60秒以内であれば他のページを閲覧することが可能です。</p>
+        <p>
+          <Link href="/">トップページ</Link>
+        </p>
+      </div>
     </div>
   )
 }
