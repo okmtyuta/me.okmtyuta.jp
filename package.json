@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:auth": "pnpm --filter @okmtyuta/me-auth build",
-    "start:auth": "pnpm --filter @okmtyuta/me-auth start:prod",
-    "dev;auth": "pnpm --"
+    "start:auth": "pnpm --filter @okmtyuta/me-auth start:prod"
   },
   "keywords": [],
   "author": "",
