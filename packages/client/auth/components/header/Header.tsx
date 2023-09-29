@@ -7,7 +7,7 @@ export const Header = ({ className }: { className?: string }) => {
     <Sticky position="top" className={clsx(styles['header'], className)}>
       <div className={styles['header-content']}>
         <Typography color="primary" fontFamily="anton">
-          <Link href="/">AmatelasUI</Link>
+          <Link href="/">okmtyuta Auth</Link>
         </Typography>
       </div>
     </Sticky>
