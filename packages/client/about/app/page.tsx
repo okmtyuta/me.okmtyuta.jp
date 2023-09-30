@@ -1,4 +1,4 @@
-import { Heading, Paragraph, Typography, List, ListItem, Space } from '@okmtyuta/amatelas'
+import { Heading, Paragraph, Typography, List, ListItem } from '@okmtyuta/amatelas'
 
 const Page = () => {
   return (
@@ -35,23 +35,23 @@ const Page = () => {
 
       <Paragraph>
         I am majored in mathematical sciences and information technologies in a broad sense. I am particularly
-        interested in
+        interested in{' '}
         <Typography color="danger" fontWeight="bold">
           quantum mechanics
         </Typography>
-        ,<Space />
+        ,{' '}
         <Typography color="danger" fontWeight="bold">
           probability and statistics
         </Typography>
-        ,<Space />
+        ,{' '}
         <Typography color="danger" fontWeight="bold">
           algebra
         </Typography>
-        ,<Space />
+        ,{' '}
         <Typography color="danger" fontWeight="bold">
           programming languages
         </Typography>
-        ,<Space />
+        ,{' '}
         <Typography color="danger" fontWeight="bold">
           machine learning
         </Typography>
