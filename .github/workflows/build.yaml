@@ -20,3 +20,6 @@ jobs:
 
       - name: Build Auth Client
         run: pnpm build:auth:client
+
+      - name: Build About Client
+        run: pnpm build:about:client

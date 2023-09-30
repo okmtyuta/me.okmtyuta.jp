@@ -6,6 +6,6 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     '@typescript-eslint/no-empty-interface': 'off',
-    'no-console': 'warn',
+    'no-console': 'warn'
   }
 }
