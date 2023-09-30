@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build:auth:client": "pnpm --filter @okmtyuta/auth.me.okmtyuta.jp build",
     "build:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp build",
     "build:auth": "pnpm build:auth:client && pnpm build:auth:api",
@@ -13,7 +12,7 @@
     "lint:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp lint",
     "lint:auth": "pnpm lint:auth:api && pnpm lint:auth:client",
     "lint:about:client": "pnpm --filter @okmtyuta/about.me.okmtyuta.jp lint",
-    "start:auth:api": "pnpm --filter @okmtyuta/me-auth start:prod",
+    "start:auth:api": "pnpm --filter @okmtyuta/auth.me.okmtyuta.jp start:prod",
     "build": "pnpm build:auth && pnpm build:about:client",
     "lint": "pnpm lint:auth && pnpm lint:about:client",
     "format": "prettier --write ./"
