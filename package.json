@@ -19,7 +19,7 @@
     "dev:auth": "pnpm dev:auth:api & pnpm dev:auth:client",
     "dev:about:client": "pnpm --filter @okmtyuta/about.me.okmtyuta.jp dev",
     "dev:about": "pnpm dev:about:client",
-    "start:auth:api": "pnpm --filter @okmtyuta/auth.me.okmtyuta.jp start:prod",
+    "start:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp start:prod",
     "build": "pnpm build:auth & pnpm build:about:client",
     "lint": "pnpm lint:auth & pnpm lint:about:client",
     "format": "prettier --write ./"
