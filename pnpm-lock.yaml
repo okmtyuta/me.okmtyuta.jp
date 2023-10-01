@@ -40,7 +40,7 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
-  packages/api/auth:
+  apps/api/auth:
     dependencies:
       '@nestjs/common':
         specifier: ^9.0.0
@@ -131,7 +131,7 @@ importers:
         specifier: ^4.7.4
         version: 4.9.5
 
-  packages/client/about:
+  apps/client/about:
     dependencies:
       '@okmtyuta/amatelas':
         specifier: ^0.11.3
@@ -168,7 +168,7 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
-  packages/client/auth:
+  apps/client/auth:
     dependencies:
       '@okmtyuta/amatelas':
         specifier: ^0.11.3
@@ -188,7 +188,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.7.1
-        version: 20.7.1
+        version: 20.8.0
       '@types/react':
         specifier: ^18.2.23
         version: 18.2.23
@@ -205,7 +205,7 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
-  packages/client/console:
+  apps/client/console:
     dependencies:
       '@remix-run/css-bundle':
         specifier: ^2.0.1
@@ -2650,10 +2650,6 @@ packages:
 
   /@types/node@16.18.54:
     resolution: {integrity: sha512-oTmGy68gxZZ21FhTJVVvZBYpQHEBZxHKTsGshobMqm9qWpbqdZsA5jvsuPZcHu0KwpmLrOHWPdEfg7XDpNT9UA==}
-    dev: true
-
-  /@types/node@20.7.1:
-    resolution: {integrity: sha512-LT+OIXpp2kj4E2S/p91BMe+VgGX2+lfO+XTpfXhh+bCk2LkQtHZSub8ewFBMGP5ClysPjTDFa4sMI8Q3n4T0wg==}
     dev: true
 
   /@types/node@20.8.0:
