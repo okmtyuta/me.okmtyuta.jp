@@ -9,6 +9,8 @@
     "build:auth": "pnpm build:auth:client & pnpm build:auth:api",
     "build:about:client": "pnpm --filter @okmtyuta/about.me.okmtyuta.jp build",
     "build:about": "pnpm build:about:client",
+    "build:packages:ui": "pnpm --filter @okmtyuta/me.okmtyuta.jp.ui build",
+    "build:packages": "pnpm build:packages:ui",
     "lint:auth:client": "pnpm --filter @okmtyuta/auth.me.okmtyuta.jp lint",
     "lint:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp lint",
     "lint:auth": "pnpm lint:auth:api & pnpm lint:auth:client",
@@ -22,8 +24,7 @@
     "start:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp start:prod",
     "build": "pnpm build:auth & pnpm build:about:client",
     "lint": "pnpm lint:auth & pnpm lint:about:client",
-    "format": "prettier --write ./",
-    "prisma:generate": "prisma generate"
+    "format": "prettier --write ./"
   },
   "keywords": [],
   "author": "",
@@ -39,6 +40,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@okmtyuta/me.okmtyuta.jp.ui": "workspace:^",
     "@prisma/client": "^5.3.1",
     "prisma": "^5.3.1"
   }

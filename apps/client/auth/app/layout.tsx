@@ -6,8 +6,9 @@ import { Frame } from '@okmtyuta/amatelas'
 import './reset.css'
 import '@okmtyuta/amatelas/style.css'
 import styles from './layout.module.css'
-import { Header } from '@/components/header/Header'
-import { Footer } from '@/components/footer/Footer'
+
+import { Header, Footer } from '@okmtyuta/me.okmtyuta.jp.ui'
+import '@okmtyuta/me.okmtyuta.jp.ui/style.css'
 
 const inter = Inter({ subsets: ['latin'] })
 

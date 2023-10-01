@@ -1,8 +1,6 @@
 */**/node_modules
 */**/.next
 pnpm-lock.yaml
-package.json
-*/**/package.json
 */**/dist
 
 packages/client/console/public/build

@@ -1,28 +1,55 @@
 {
-  "name": "ui",
-  "private": true,
+  "name": "@okmtyuta/me.okmtyuta.jp.ui",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "author": "okmtyuta",
+  "license": "MIT",
+  "main": "./ui/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https:/github.com/okmtyuta/amatelas"
+  },
+  "files": [
+    "dist",
+    "dist/index.css"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./header": {
+      "import": "./dist/header",
+      "types": "./dist/types/header.d.ts"
+    },
+    "./footer": {
+      "import": "./dist/footer",
+      "types": "./dist/types/footer.d.ts"
+    },
+    "./style.css": {
+      "import": "./dist/style.css"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build && tsc && tsc-alias",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "devDependencies": {
+    "@types/react": "^18.2.23",
+    "@types/react-dom": "^18.2.8",
+    "@vitejs/plugin-react-swc": "^3.4.0",
+    "sass": "^1.68.0",
+    "tsc-alias": "^1.8.8",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.5"
+  },
   "dependencies": {
+    "@okmtyuta/amatelas": "^0.11.3",
+    "clsx": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "@vitejs/plugin-react-swc": "^3.3.2",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5"
   }
 }
