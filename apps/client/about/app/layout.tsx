@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import { Header, Footer } from '@okmtyuta/me.okmtyuta.jp.ui'
-import { Frame, Link } from '@okmtyuta/amatelas'
+import { Frame, Link } from '@okmtyuta/amatelas/server'
 import { GitHubLogoSVG, ZennLogoSVG, YouTubeLogoSVG } from '@/components/svg'
 
 import '@okmtyuta/awesome-css/reset.css'
@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header>
+        <Header label="okmtyuta about">
           <Links />
         </Header>
         <Frame>{children}</Frame>

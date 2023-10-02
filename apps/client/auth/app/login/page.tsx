@@ -1,5 +1,5 @@
 'use client'
-import { ReactNode, useState } from 'react'
+import {  useState } from 'react'
 import Link from 'next/link'
 import { redirect, useSearchParams } from 'next/navigation'
 
@@ -20,7 +20,7 @@ const Login = () => {
   const [username, setUsername] = useState<string>('alice')
   const [password, setPassword] = useState<string>('p@ssw0rd')
   const [alerts, setAlerts] = useState<Alerts>([])
-  const [accessToken, setAccessToken] = useState<ReactNode>('未取得')
+  const [accessToken, setAccessToken] = useState<JSX.Element>(<>未取得</>)
 
   const onClick = async () => {
     setAccessToken(<Progress />)
@@ -41,7 +41,7 @@ const Login = () => {
           { label: 'ERROR', content: 'Authentication Failed', key: crypto.randomUUID(), variant: 'error' }
         ]
       })
-      setAccessToken('取得失敗')
+      setAccessToken(<>取得失敗</>)
     }
 
     if (data.ok) {
@@ -51,7 +51,7 @@ const Login = () => {
           { label: 'SUCCESS', content: 'Authentication Success', key: crypto.randomUUID(), variant: 'success' }
         ]
       })
-      setAccessToken(data.access_token)
+      setAccessToken(<>{data.access_token}</>)
       setLogined(true)
     }
   }
@@ -71,7 +71,7 @@ const Login = () => {
 
       <div className={styles['access-token-div']}>
         <p>アクセストークンは</p>
-        <p className={styles['access-token']}>{accessToken}</p>
+        <div className={styles['access-token']}>{accessToken}</div>
         <p>です。</p>
         <p>アクセストークンが表示されてから20秒以内であれば他のページを閲覧することが可能です。</p>
         <p>

@@ -1,4 +1,4 @@
-import { Heading, Paragraph, Typography, List, ListItem } from '@okmtyuta/amatelas'
+import { Heading, Paragraph, Typography, List, ListItem } from '@okmtyuta/amatelas/server'
 
 const Page = () => {
   return (

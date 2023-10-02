@@ -1,12 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { resolve } from 'path'
+import pkg from './package.json'
 
 export default defineConfig({
   resolve: {
     alias: {}
   },
   build: {
+    // cssCodeSplit: true,
     outDir: 'dist',
     lib: {
       entry: {
@@ -15,11 +17,11 @@ export default defineConfig({
       }
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'clsx', '@okmtyuta/amatelas'],
+      external: Object.keys(pkg.peerDependencies),
       output: {
         globals: {
           react: 'React',
-          ReactDOM: 'react-dom'
+          'react-dom': 'ReactDOM'
         }
       }
     }

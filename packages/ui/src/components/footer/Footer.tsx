@@ -1,4 +1,4 @@
-import { Space, Typography } from '@okmtyuta/amatelas'
+import { Space, Typography } from '@okmtyuta/amatelas/server'
 import styles from './footer.module.css'
 import { ComponentProps } from 'react'
 import { clsx } from 'clsx'
