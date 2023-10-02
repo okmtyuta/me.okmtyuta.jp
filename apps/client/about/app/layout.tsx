@@ -6,6 +6,7 @@ import { Frame, Link } from '@okmtyuta/amatelas/server'
 import { GitHubLogoSVG, ZennLogoSVG, YouTubeLogoSVG } from '@/components/svg'
 
 import '@okmtyuta/awesome-css/reset.css'
+import "./index.css"
 import '@okmtyuta/amatelas/style.css'
 import '@okmtyuta/me.okmtyuta.jp.ui/style.css'
 import headerStyles from './header.module.css'
