@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "prebuild": "pnpm --filter @okmtyuta/me.okmtyuta.jp.ui build",
-    "build": "remix build",
+    "build": "pnpm prebuild &&  build",
     "dev": "remix dev --manual",
     "start": "remix-serve ./build/index.js",
     "typecheck": "tsc"
