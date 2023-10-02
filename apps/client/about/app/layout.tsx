@@ -9,7 +9,6 @@ import '@okmtyuta/awesome-css/reset.css'
 import '@okmtyuta/amatelas/style.css'
 import '@okmtyuta/me.okmtyuta.jp.ui/style.css'
 import headerStyles from './header.module.css'
-import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
