@@ -55,7 +55,7 @@ const Page = () => {
         <Typography color="danger" fontWeight="bold">
           machine learning
         </Typography>
-        , and
+        , and {' '}
         <Typography color="danger" fontWeight="bold">
           cryptology
         </Typography>
