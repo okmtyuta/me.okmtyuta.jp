@@ -12,7 +12,7 @@ export const Header = ({ className, label, ...props }: HeaderProps) => {
   return (
     <Sticky {...props} position="top" className={clsx(styles['header'], className)}>
       <div className={styles['header-content']}>
-        <Typography color="primary" fontFamily="anton">
+        <Typography fontFamily="anton">
           <Link href="/">{label ?? 'okmtyuta'}</Link>
         </Typography>
         {props.children}

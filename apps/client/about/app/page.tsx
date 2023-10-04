@@ -64,7 +64,7 @@ const Page = () => {
 
       <Heading>Educations</Heading>
 
-      <Paragraph>大学では数理物理学を学習しました。来年からは大学院で深層学習の数学を研究する予定です。</Paragraph>
+      <Paragraph>大学では数理物理学を学習しました。来年からは大学院で深層学習の数理を研究する予定です。</Paragraph>
 
       <Paragraph>
         I have studied Mathematical Physics in undergraduate school. In graduate school, I am going to study
@@ -108,7 +108,13 @@ const Page = () => {
           <Typography color="danger" fontWeight="bold">
             PKSHA Technology, Inc.
           </Typography>
-          : March 2022 - April 2023, Software Engineer, Internship
+          : March 2023 - April 2023, Software Engineer, Internship
+        </ListItem>
+        <ListItem>
+          <Typography color="danger" fontWeight="bold">
+            PKSHA Technology, Inc.
+          </Typography>
+          : October 2023 - Current, Software Engineer, Internship
         </ListItem>
       </List>
     </>

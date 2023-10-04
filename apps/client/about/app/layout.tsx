@@ -1,17 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Anton } from 'next/font/google'
 
 import { Header, Footer } from '@okmtyuta/me.okmtyuta.jp.ui'
 import { Frame, Link } from '@okmtyuta/amatelas/server'
 import { GitHubLogoSVG, ZennLogoSVG, YouTubeLogoSVG } from '@/components/svg'
 
 import '@okmtyuta/awesome-css/reset.css'
-import "./index.css"
+import './index.css'
 import '@okmtyuta/amatelas/style.css'
 import '@okmtyuta/me.okmtyuta.jp.ui/style.css'
 import headerStyles from './header.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
+const anton = Anton({
+  weight: '400',
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: 'okmtyuta | about',
@@ -44,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header label="okmtyuta about">
+        <Header className={anton.className} label="okmtyuta about">
           <Links />
         </Header>
         <Frame>{children}</Frame>
