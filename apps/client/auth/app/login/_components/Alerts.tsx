@@ -9,7 +9,7 @@ export const Alerts = (props: { alerts: Alerts; setAlerts: Dispatch<SetStateActi
       {props.alerts.map((alert) => {
         return (
           <ClientAlert
-            onDeleteClick={() => {
+            onDelete={() => {
               props.setAlerts((current) => {
                 return current.filter((dalert) => {
                   return dalert.key !== alert.key
@@ -18,7 +18,7 @@ export const Alerts = (props: { alerts: Alerts; setAlerts: Dispatch<SetStateActi
             }}
             key={alert.key}
             variant={alert.variant}
-            label={alert.label}
+            summary={alert.label}
           >
             {alert.content}
           </ClientAlert>
