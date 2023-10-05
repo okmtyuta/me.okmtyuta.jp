@@ -1,4 +1,4 @@
-import { Fixed, ClientAlert } from '@okmtyuta/amatelas'
+import { Fixed, Alert } from '@okmtyuta/amatelas/server'
 import { Dispatch, SetStateAction } from 'react'
 
 type Alerts = { label: string; content: string; key: string; variant: 'success' | 'error' }[]
@@ -8,7 +8,7 @@ export const Alerts = (props: { alerts: Alerts; setAlerts: Dispatch<SetStateActi
     <Fixed positionalMargin={{ x: 'none' }}>
       {props.alerts.map((alert) => {
         return (
-          <ClientAlert
+          <Alert
             onDelete={() => {
               props.setAlerts((current) => {
                 return current.filter((dalert) => {
@@ -21,7 +21,7 @@ export const Alerts = (props: { alerts: Alerts; setAlerts: Dispatch<SetStateActi
             summary={alert.label}
           >
             {alert.content}
-          </ClientAlert>
+          </Alert>
         )
       })}
     </Fixed>

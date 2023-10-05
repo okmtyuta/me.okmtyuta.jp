@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { clsx } from 'clsx'
 import { Inter } from 'next/font/google'
-import { Frame } from '@okmtyuta/amatelas'
+import { Frame } from '@okmtyuta/amatelas/server'
 
 import './reset.css'
 import '@okmtyuta/amatelas/style.css'
