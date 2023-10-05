@@ -3,7 +3,7 @@ import {  useState } from 'react'
 import Link from 'next/link'
 import { redirect, useSearchParams } from 'next/navigation'
 
-import { LabelButton, Progress } from '@okmtyuta/amatelas'
+import { LabelButton, Progress } from '@okmtyuta/amatelas/server'
 import { Alerts, UsernameTextField, PasswordTextField } from './_components'
 import styles from './login.module.css'
 

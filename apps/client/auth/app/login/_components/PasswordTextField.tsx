@@ -1,4 +1,4 @@
-import { TextField } from '@okmtyuta/amatelas'
+import { TextField } from '@okmtyuta/amatelas/server'
 import { Dispatch, SetStateAction } from 'react'
 
 export const PasswordTextField = (props: { setPassword: Dispatch<SetStateAction<string>>; defaultValue: string }) => {
