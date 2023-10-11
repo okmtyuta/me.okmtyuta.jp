@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header className={anton.className} label="okmtyuta about">
+        <Header className={anton.className} label="okmtyuta poetry">
           <Links />
         </Header>
         <Frame>{children}</Frame>

@@ -1,2 +1,3 @@
 export { Header } from './components/header'
 export { Footer } from './components/footer'
+export { GitHubLogoSVG, ZennLogoSVG, YouTubeLogoSVG } from './svg'

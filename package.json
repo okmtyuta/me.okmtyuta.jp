@@ -9,6 +9,8 @@
     "build:auth": "pnpm build:auth:client & pnpm build:auth:api",
     "build:about:client": "pnpm --filter @okmtyuta/about.me.okmtyuta.jp build",
     "build:about": "pnpm build:about:client",
+    "build:poetry:client": "pnpm --filter @okmtyuta/poetry.me.okmtyuta.jp build",
+    "build:poetry": "pnpm build:poetry:client",
     "build:packages:ui": "pnpm --filter @okmtyuta/me.okmtyuta.jp.ui build",
     "build:packages": "pnpm build:packages:ui",
     "lint:auth:client": "pnpm --filter @okmtyuta/auth.me.okmtyuta.jp lint",
@@ -21,6 +23,8 @@
     "dev:auth": "pnpm dev:auth:api & pnpm dev:auth:client",
     "dev:about:client": "pnpm --filter @okmtyuta/about.me.okmtyuta.jp dev",
     "dev:about": "pnpm dev:about:client",
+    "dev:poetry:client": "pnpm --filter @okmtyuta/poetry.me.okmtyuta.jp dev",
+    "dev:poetry": "pnpm dev:poetry:client",
     "start:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp start:prod",
     "build": "pnpm build:auth & pnpm build:about:client",
     "lint": "pnpm lint:auth & pnpm lint:about:client",
@@ -30,18 +34,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.7.3",
-    "@typescript-eslint/parser": "^6.7.3",
-    "eslint": "^8.50.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "eslint": "^8.51.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "eslint-plugin-storybook": "^0.6.14",
+    "eslint-plugin-storybook": "^0.6.15",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   },
   "dependencies": {
     "@okmtyuta/me.okmtyuta.jp.ui": "workspace:^",
-    "@prisma/client": "^5.3.1",
-    "prisma": "^5.3.1"
+    "@prisma/client": "^5.4.2",
+    "prisma": "^5.4.2"
   }
 }
