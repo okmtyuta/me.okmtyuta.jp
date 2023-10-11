@@ -27,19 +27,13 @@
     "dev:poetry": "pnpm dev:poetry:client",
     "start:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp start:prod",
     "build": "pnpm build:auth & pnpm build:about:client",
-    "lint": "pnpm lint:auth & pnpm lint:about:client",
+    "lint": "pnpm lint:auth & pnpm lint:about",
     "format": "prettier --write ./"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.7.5",
-    "@typescript-eslint/parser": "^6.7.5",
-    "eslint": "^8.51.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "eslint-plugin-storybook": "^0.6.15",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   },

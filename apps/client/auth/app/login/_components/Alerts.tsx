@@ -8,18 +8,7 @@ export const Alerts = (props: { alerts: Alerts; setAlerts: Dispatch<SetStateActi
     <Fixed positionalMargin={{ x: 'none' }}>
       {props.alerts.map((alert) => {
         return (
-          <Alert
-            onDelete={() => {
-              props.setAlerts((current) => {
-                return current.filter((dalert) => {
-                  return dalert.key !== alert.key
-                })
-              })
-            }}
-            key={alert.key}
-            variant={alert.variant}
-            summary={alert.label}
-          >
+          <Alert key={alert.key} variant={alert.variant}>
             {alert.content}
           </Alert>
         )

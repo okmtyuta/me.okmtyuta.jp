@@ -4,7 +4,6 @@ import { Inter, Anton } from 'next/font/google'
 import { Header, Footer, GitHubLogoSVG, ZennLogoSVG, YouTubeLogoSVG } from '@okmtyuta/me.okmtyuta.jp.ui'
 import { Frame, Link } from '@okmtyuta/amatelas/server'
 
-
 import '@okmtyuta/awesome-css/reset.css'
 import './index.css'
 import '@okmtyuta/amatelas/style.css'

@@ -6,7 +6,9 @@ const Page = () => {
     <>
       <Heading>誰かが言ったポエムたち......</Heading>
       <List>
-        <ListItem><Link href="/poets/1">甘美な夢</Link></ListItem>
+        <ListItem>
+          <Link href="/poets/1">甘美な夢</Link>
+        </ListItem>
       </List>
     </>
   )
