@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Anton } from 'next/font/google'
 
 import { Header, Footer, GitHubLogoSVG, ZennLogoSVG, YouTubeLogoSVG } from '@okmtyuta/me.okmtyuta.jp.ui'
-import { Frame, Link } from '@okmtyuta/amatelas/server'
+import { Frame, Link, Space } from '@okmtyuta/amatelas/server'
 
 import '@okmtyuta/awesome-css/reset.css'
 import './index.css'
@@ -51,7 +51,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Links />
         </Header>
         <Frame>{children}</Frame>
-        <Footer />
+        <Footer>
+          Designed by
+          <Space />
+          <span className={anton.className}>okmtyuta</span>
+        </Footer>
       </body>
     </html>
   )
