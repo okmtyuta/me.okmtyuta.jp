@@ -7,8 +7,8 @@ const Page = () => {
 
       <Heading as="h2">今日やったこと</Heading>
       <List>
-        <ListItem>講究でHilbert空間上のFourier級数展開について発表した</ListItem>
-        <ListItem>Daily Feedbackのページを実験的に作ってみた</ListItem>
+        <ListItem marker='done'>講究でHilbert空間上のFourier級数展開について発表した</ListItem>
+        <ListItem marker='done'>Daily Feedbackのページを実験的に作ってみた</ListItem>
       </List>
 
       <Heading as="h2">明日やること</Heading>

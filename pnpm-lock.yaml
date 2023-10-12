@@ -119,8 +119,8 @@ importers:
   apps/client/about:
     dependencies:
       '@okmtyuta/amatelas':
-        specifier: ^0.11.8
-        version: 0.11.8(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8)
+        specifier: ^0.11.9
+        version: 0.11.9(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8)
       '@okmtyuta/awesome-css':
         specifier: ^0.0.0
         version: 0.0.0(typescript@5.2.2)
@@ -3334,8 +3334,8 @@ packages:
       styled-components: 6.0.8(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /@okmtyuta/amatelas@0.11.8(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8):
-    resolution: {integrity: sha512-QPAUgAojEPDpbqDuYjd3/BHt4nUvAkAPD1zPpMQUe/uSjCVAFk9esB9gLScpPNarRr6n5iuxl7QHYLXtuIg00Q==}
+  /@okmtyuta/amatelas@0.11.9(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8):
+    resolution: {integrity: sha512-M+0UInjLNypvepPUQ9r7xyIIFHlUNy/DDTycuGYVEFET/a9mhY+cG1SMMDCxO5bPKAs5jA0LXjBSR+kH45rJpg==}
     peerDependencies:
       clsx: ^2.0.0
       react: ^18.2.0
@@ -6008,7 +6008,7 @@ packages:
       get-symbol-description: 1.0.0
       globalthis: 1.0.3
       gopd: 1.0.1
-      has: 1.0.3
+      has: 1.0.4
       has-property-descriptors: 1.0.0
       has-proto: 1.0.1
       has-symbols: 1.0.3
@@ -6080,7 +6080,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       get-intrinsic: 1.2.1
-      has: 1.0.3
+      has: 1.0.4
       has-tostringtag: 1.0.0
     dev: true
 
@@ -7393,7 +7393,7 @@ packages:
     resolution: {integrity: sha512-2DcsyfABl+gVHEfCOaTrWgyt+tb6MSEGmKq+kI5HwLbIYgjgmMcV8KQ41uaKz1xxUcn9tJtgFbQUEVcEbd0FYw==}
     dependencies:
       function-bind: 1.1.1
-      has: 1.0.3
+      has: 1.0.4
       has-proto: 1.0.1
       has-symbols: 1.0.3
 
@@ -7593,7 +7593,6 @@ packages:
   /has@1.0.4:
     resolution: {integrity: sha512-qdSAmqLF6209RFj4VVItywPMbm3vWylknmB3nvNiUIs72xAimcM8nVYxYr7ncvZq5qzk9MKIZR8ijqD/1QuYjQ==}
     engines: {node: '>= 0.4.0'}
-    dev: true
 
   /hast-util-to-estree@2.3.3:
     resolution: {integrity: sha512-ihhPIUPxN0v0w6M5+IiAZZrn0LH2uZomeWwhn7uP7avZC6TE7lIiEh2yBMPr5+zi1aUCXq6VoYRgs2Bw9xmycQ==}
