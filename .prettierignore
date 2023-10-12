@@ -3,10 +3,10 @@
 pnpm-lock.yaml
 */**/dist
 
-apps/packages/client/console/public/build
-apps/packages/client/console/build
-apps/packages/client/console/.cache
-apps/packages/client/console/node_modules
+apps/client/console/public/build
+apps/client/console/build
+apps/client/console/.cache
+apps/client/console/node_modules
 
 .eslintrc.*
 */**/.eslintrc.*
