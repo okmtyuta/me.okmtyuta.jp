@@ -91,32 +91,34 @@ const Page = () => {
         but also Machine Learning and UI/UX design.
       </Paragraph>
 
-      <List>
-        <ListItem>
-          <Typography color="danger" fontWeight="bold">
-            Rakuten Group, Inc.
-          </Typography>
-          : August 2022, Application Engineer, Internship
-        </ListItem>
-        <ListItem>
-          <Typography color="danger" fontWeight="bold">
-            Net Protections, Inc.
-          </Typography>
-          : October 2022 - April 2023, Application Engineer, Internship
-        </ListItem>
-        <ListItem>
-          <Typography color="danger" fontWeight="bold">
-            PKSHA Technology, Inc.
-          </Typography>
-          : March 2023 - April 2023, Software Engineer, Internship
-        </ListItem>
-        <ListItem>
-          <Typography color="danger" fontWeight="bold">
-            PKSHA Technology, Inc.
-          </Typography>
-          : October 2023 - Current, Software Engineer, Internship
-        </ListItem>
-      </List>
+      <div className="test">
+        <List>
+          <ListItem>
+            <Typography color="danger" fontWeight="bold">
+              Rakuten Group, Inc.
+            </Typography>
+            : August 2022, Application Engineer, Internship
+          </ListItem>
+          <ListItem>
+            <Typography color="danger" fontWeight="bold">
+              Net Protections, Inc.
+            </Typography>
+            : October 2022 - April 2023, Application Engineer, Internship
+          </ListItem>
+          <ListItem>
+            <Typography color="danger" fontWeight="bold">
+              PKSHA Technology, Inc.
+            </Typography>
+            : March 2023 - April 2023, Software Engineer, Internship
+          </ListItem>
+          <ListItem>
+            <Typography color="danger" fontWeight="bold">
+              PKSHA Technology, Inc.
+            </Typography>
+            : October 2023 - Current, Software Engineer, Internship
+          </ListItem>
+        </List>
+      </div>
     </>
   )
 }
