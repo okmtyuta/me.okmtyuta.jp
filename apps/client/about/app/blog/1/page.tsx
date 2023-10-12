@@ -19,6 +19,7 @@ const Page = () => {
 
       <Heading as="h2">感想</Heading>
       <Paragraph>講究で久しぶりに発表した。緊張したけど失敗はしなかった。来週も頑張ろう。</Paragraph>
+      <Paragraph>YOASOBIの「アドベンチャー」を聞いた。とても良かった。YOASOBIで一番の名曲だと思う。</Paragraph>
     </>
   )
 }
