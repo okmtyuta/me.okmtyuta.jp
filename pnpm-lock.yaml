@@ -119,8 +119,8 @@ importers:
   apps/client/about:
     dependencies:
       '@okmtyuta/amatelas':
-        specifier: ^0.11.9
-        version: 0.11.9(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8)
+        specifier: ^0.11.11
+        version: 0.11.11(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8)
       '@okmtyuta/awesome-css':
         specifier: ^0.0.0
         version: 0.0.0(typescript@5.2.2)
@@ -241,43 +241,6 @@ importers:
       eslint:
         specifier: ^8.50.0
         version: 8.50.0
-      typescript:
-        specifier: ^5.2.2
-        version: 5.2.2
-
-  apps/client/poetry:
-    dependencies:
-      '@okmtyuta/amatelas':
-        specifier: ^0.11.6
-        version: 0.11.6(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8)
-      '@okmtyuta/awesome-css':
-        specifier: ^0.0.0
-        version: 0.0.0(typescript@5.2.2)
-      next:
-        specifier: ^13.5.3
-        version: 13.5.4(@babel/core@7.23.0)(react-dom@18.2.0)(react@18.2.0)
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@types/node':
-        specifier: ^20.8.0
-        version: 20.8.4
-      '@types/react':
-        specifier: ^18.2.24
-        version: 18.2.28
-      '@types/react-dom':
-        specifier: ^18.2.8
-        version: 18.2.13
-      eslint:
-        specifier: ^8.50.0
-        version: 8.51.0
-      eslint-config-next:
-        specifier: ^13.5.3
-        version: 13.5.4(eslint@8.51.0)(typescript@5.2.2)
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
@@ -465,6 +428,7 @@ packages:
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/core@7.23.2:
     resolution: {integrity: sha512-n7s51eWdaWZ3vGT2tD4T7J6eJs3QoBXydv7vkUM06Bf1cbVD2Kc2UrkzhiQwobfV7NwOnQXYL7UBJ5VPU+RGoQ==}
@@ -638,6 +602,7 @@ packages:
       '@babel/helper-simple-access': 7.22.5
       '@babel/helper-split-export-declaration': 7.22.6
       '@babel/helper-validator-identifier': 7.22.20
+    dev: true
 
   /@babel/helper-module-transforms@7.23.0(@babel/core@7.23.2):
     resolution: {integrity: sha512-WhDWw1tdrlT0gMgUJSlX0IQvoO1eN279zrAUbVB+KpV2c3Tylz8+GnKOLllCS6Z/iZQEyVYxhZVUdPTqs2YYPw==}
@@ -746,6 +711,7 @@ packages:
       '@babel/types': 7.23.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/helpers@7.23.2:
     resolution: {integrity: sha512-lzchcp8SjTSVe/fPmLwtWVBFC7+Tbn8LGHDVfDp9JGxpAY5opSaEFgt8UQvrnECWOTdji2mOWMz1rOhkHscmGQ==}
@@ -2029,6 +1995,7 @@ packages:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
 
   /@babel/traverse@7.23.2:
     resolution: {integrity: sha512-azpe59SQ48qG6nu2CzcMLbxUudtN+dOM9kDbUqGq3HXUJRlo7i8fvPoxQUzYgLZ4cMVmuZgm8vvBpNeRhd6XSw==}
@@ -3309,6 +3276,20 @@ packages:
     transitivePeerDependencies:
       - encoding
 
+  /@okmtyuta/amatelas@0.11.11(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8):
+    resolution: {integrity: sha512-5FcXPyE4i73UUvZ2Wz05RgnsGnS36B72lAVuezaY/to6F0EInfD4EnXdcJXvPC6QFHKct8zE+AEDyLeq+z4wTw==}
+    peerDependencies:
+      clsx: ^2.0.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      styled-components: ^6.0.8
+    dependencies:
+      clsx: 2.0.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      styled-components: 6.0.8(react-dom@18.2.0)(react@18.2.0)
+    dev: false
+
   /@okmtyuta/amatelas@0.11.3(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-6F1D8KcC7vLbGcj/STHY0Wa7rI/flXuxfgz4i1zHpxyUTDMhD6A7TdjGKg34dMXVk3Lry+TiihSHqPri824ihQ==}
     peerDependencies:
@@ -3322,20 +3303,6 @@ packages:
 
   /@okmtyuta/amatelas@0.11.6(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8):
     resolution: {integrity: sha512-GTvUCPNLTi0Hp03ZCxe4TvtfhtpVkoxFPo58QT583wBKc+Ea9gdsAGr+OB6FNu+eD3RYuy9kinkTGE0G3rv96g==}
-    peerDependencies:
-      clsx: ^2.0.0
-      react: ^18.2.0
-      react-dom: ^18.2.0
-      styled-components: ^6.0.8
-    dependencies:
-      clsx: 2.0.0
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      styled-components: 6.0.8(react-dom@18.2.0)(react@18.2.0)
-    dev: false
-
-  /@okmtyuta/amatelas@0.11.9(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.8):
-    resolution: {integrity: sha512-M+0UInjLNypvepPUQ9r7xyIIFHlUNy/DDTycuGYVEFET/a9mhY+cG1SMMDCxO5bPKAs5jA0LXjBSR+kH45rJpg==}
     peerDependencies:
       clsx: ^2.0.0
       react: ^18.2.0
@@ -6565,7 +6532,7 @@ packages:
       eslint: 8.50.0
       eslint-import-resolver-node: 0.3.9
       eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.7.5)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.50.0)
-      has: 1.0.4
+      has: 1.0.3
       is-core-module: 2.13.0
       is-glob: 4.0.3
       minimatch: 3.1.2
@@ -9587,45 +9554,6 @@ packages:
       - babel-plugin-macros
     dev: false
 
-  /next@13.5.4(@babel/core@7.23.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-+93un5S779gho8y9ASQhb/bTkQF17FNQOtXLKAj3lsNgltEcF0C5PMLLncDmH+8X1EnJH1kbqAERa29nRXqhjA==}
-    engines: {node: '>=16.14.0'}
-    hasBin: true
-    peerDependencies:
-      '@opentelemetry/api': ^1.1.0
-      react: ^18.2.0
-      react-dom: ^18.2.0
-      sass: ^1.3.0
-    peerDependenciesMeta:
-      '@opentelemetry/api':
-        optional: true
-      sass:
-        optional: true
-    dependencies:
-      '@next/env': 13.5.4
-      '@swc/helpers': 0.5.2
-      busboy: 1.6.0
-      caniuse-lite: 1.0.30001547
-      postcss: 8.4.31
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      styled-jsx: 5.1.1(@babel/core@7.23.0)(react@18.2.0)
-      watchpack: 2.4.0
-    optionalDependencies:
-      '@next/swc-darwin-arm64': 13.5.4
-      '@next/swc-darwin-x64': 13.5.4
-      '@next/swc-linux-arm64-gnu': 13.5.4
-      '@next/swc-linux-arm64-musl': 13.5.4
-      '@next/swc-linux-x64-gnu': 13.5.4
-      '@next/swc-linux-x64-musl': 13.5.4
-      '@next/swc-win32-arm64-msvc': 13.5.4
-      '@next/swc-win32-ia32-msvc': 13.5.4
-      '@next/swc-win32-x64-msvc': 13.5.4
-    transitivePeerDependencies:
-      - '@babel/core'
-      - babel-plugin-macros
-    dev: false
-
   /next@13.5.4(@babel/core@7.23.2)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-+93un5S779gho8y9ASQhb/bTkQF17FNQOtXLKAj3lsNgltEcF0C5PMLLncDmH+8X1EnJH1kbqAERa29nRXqhjA==}
     engines: {node: '>=16.14.0'}
@@ -11211,24 +11139,6 @@ packages:
       tslib: 2.6.2
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /styled-jsx@5.1.1(@babel/core@7.23.0)(react@18.2.0):
-    resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
-    engines: {node: '>= 12.0.0'}
-    peerDependencies:
-      '@babel/core': '*'
-      babel-plugin-macros: '*'
-      react: '>= 16.8.0 || 17.x.x || ^18.0.0-0'
-    peerDependenciesMeta:
-      '@babel/core':
-        optional: true
-      babel-plugin-macros:
-        optional: true
-    dependencies:
-      '@babel/core': 7.23.0
-      client-only: 0.0.1
-      react: 18.2.0
     dev: false
 
   /styled-jsx@5.1.1(@babel/core@7.23.2)(react@18.2.0):
