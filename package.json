@@ -24,7 +24,7 @@
     "start:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp start:prod",
     "build": "pnpm build:auth & pnpm build:about:client",
     "lint": "pnpm lint:auth & pnpm lint:about",
-    "format": "prettier --write ./"
+    "format": "pnpm prisma format & prettier --write ./"
   },
   "keywords": [],
   "author": "",

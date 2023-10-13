@@ -8,11 +8,12 @@
     "build": "pnpm prebuild && remix build",
     "dev": "remix dev --manual",
     "start": "remix-serve ./build/index.js",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@okmtyuta/amatelas": "^0.11.6",
-    "@okmtyuta/awesome-css": "^0.0.0",
+    "@okmtyuta/amatelas": "^0.11.17",
+    "@okmtyuta/awesome-css": "^0.0.2",
     "@okmtyuta/me.okmtyuta.jp.ui": "workspace:^",
     "@remix-run/css-bundle": "^2.0.1",
     "@remix-run/node": "^2.0.1",

@@ -19,3 +19,9 @@ model User {
   account   Account @relation(fields: [accountId], references: [id])
   accountId Int     @unique
 }
+
+model Feedback {
+  id      Int    @id @default(autoincrement())
+  summary String
+  body    String
+}
