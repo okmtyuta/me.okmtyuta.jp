@@ -1,4 +1,5 @@
 import { Heading, Paragraph, Typography, List, ListItem } from '@okmtyuta/amatelas/server'
+import Link from 'next/link'
 
 const Page = () => {
   return (
@@ -116,6 +117,12 @@ const Page = () => {
           </Typography>
           : October 2023 - Current, Software Engineer, Internship
         </ListItem>
+      </List>
+
+      <Heading>Diary</Heading>
+      <List>
+        <ListItem><Link href="/blog/1">12th October 2023</Link></ListItem>
+        <ListItem><Link href="/blog/2">13th October 2023</Link></ListItem>
       </List>
     </>
   )
