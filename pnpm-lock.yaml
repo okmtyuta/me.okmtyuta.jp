@@ -119,8 +119,8 @@ importers:
   apps/client/about:
     dependencies:
       '@okmtyuta/amatelas':
-        specifier: ^0.11.15
-        version: 0.11.15(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.9)
+        specifier: ^0.11.18
+        version: 0.11.18(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.9)
       '@okmtyuta/awesome-css':
         specifier: ^0.0.2
         version: 0.0.2(typescript@5.2.2)
@@ -3292,6 +3292,20 @@ packages:
 
   /@okmtyuta/amatelas@0.11.17(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.9):
     resolution: {integrity: sha512-jebiKBJSYrDg1VCPC2FJVIomSRN3ErTRY06d+AQm41XsX3cU0i4RBC13UGeRx+v2evHMrsaXMhI3OlWUkelpNQ==}
+    peerDependencies:
+      clsx: ^2.0.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      styled-components: ^6.0.8
+    dependencies:
+      clsx: 2.0.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      styled-components: 6.0.9(react-dom@18.2.0)(react@18.2.0)
+    dev: false
+
+  /@okmtyuta/amatelas@0.11.18(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.0.9):
+    resolution: {integrity: sha512-DVGRc2rpip98WQKIyhZfWIWZu7xuAFxXDgah0/CYv/VuDy9l1o3cR5vG8a4VDGisp8KwpjfELvmN8PcBVnKolg==}
     peerDependencies:
       clsx: ^2.0.0
       react: ^18.2.0

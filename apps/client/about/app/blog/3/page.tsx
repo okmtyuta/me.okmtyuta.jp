@@ -7,16 +7,17 @@ const Page = () => {
 
       <Heading as="h2">今日やったこと</Heading>
       <List>
-        <ListItem marker="done">プールに泳ぎに行った</ListItem>
+        <ListItem marker="done">プールに泳ぎに行った。</ListItem>
       </List>
 
       <Heading as="h2">明日やること</Heading>
       <List>
-        <ListItem>来週の講究の準備をする</ListItem>
+        <ListItem>来週の講究の準備をする。</ListItem>
       </List>
 
       <Heading as="h2">感想</Heading>
       <Paragraph>初めて御殿下記念館のプールに行ったが，空いていてとても泳ぎやすかった。これから通おう。</Paragraph>
+      <Paragraph>input[type="text"]でpatternと:valid/:invalidを利用するとHTML/CSSだけで簡易的なvalidationができるらしい。</Paragraph>
     </>
   )
 }
