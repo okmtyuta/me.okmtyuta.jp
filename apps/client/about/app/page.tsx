@@ -121,8 +121,16 @@ const Page = () => {
 
       <Heading>Diary</Heading>
       <List>
-        <ListItem><Link href="/blog/1">12th October 2023</Link></ListItem>
-        <ListItem><Link href="/blog/2">13th October 2023</Link></ListItem>
+        <ListItem>
+          <Link prefetch={false} href="/blog/1">
+            12th October 2023
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link prefetch={false} href="/blog/2">
+            13th October 2023
+          </Link>
+        </ListItem>
       </List>
     </>
   )
