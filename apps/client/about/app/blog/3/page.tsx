@@ -17,7 +17,7 @@ const Page = () => {
 
       <Heading as="h2">感想</Heading>
       <Paragraph>初めて御殿下記念館のプールに行ったが，空いていてとても泳ぎやすかった。これから通おう。</Paragraph>
-      <Paragraph>input[type="text"]でpatternと:valid/:invalidを利用するとHTML/CSSだけで簡易的なvalidationができるらしい。</Paragraph>
+      <Paragraph>inputでpatternと:valid/:invalidを利用するとHTML/CSSだけで簡易的なvalidationができるらしい。</Paragraph>
     </>
   )
 }

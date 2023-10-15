@@ -1,10 +1,11 @@
 {
-  "name": "blog",
+  "name": "@okmtyuta/blog.me.okmtyuta.jp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "prebuild": "pnpm --filter @okmtyuta/me.okmtyuta.jp.ui build",
+    "build": "pnpm prebuild && next build",
     "start": "next start",
     "lint": "next lint"
   },
