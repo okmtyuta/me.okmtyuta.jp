@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@okmtyuta/amatelas": "^0.11.3",
+    "@okmtyuta/me.okmtyuta.jp.ui": "workspace:^",
     "clsx": "^2.0.0",
     "next": "^13.5.3",
     "react": "^18.2.0",

@@ -1,5 +1,7 @@
-import { articles, findArticleById, findTaskById } from '@/db/blog/data'
-import { Heading, List, ListItem, Paragraph, Title } from '@okmtyuta/amatelas/server'
+import { formatDate } from '@/date/format'
+import { dailyFeedbacks, tasks } from '@/db/blog/data'
+import { Markdown } from '@okmtyuta/amatelas-markdown'
+import { Heading, List, ListItem, Title } from '@okmtyuta/amatelas/server'
 
 type Params = {
   id: string
@@ -9,51 +11,33 @@ type PageProps = {
 }
 
 export const generateStaticParams = async (): Promise<Params[]> => {
-  return articles.map((article) => {
+  return dailyFeedbacks.map((dailyFeedback) => {
     return {
-      id: article.id
+      id: dailyFeedback.id
     }
   })
 }
 export const dynamicParams = false
-const formatDate = (date: Date) => {
-  const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'
-  ]
-  return `${date.getDate()}th ${months[date.getMonth()]} ${date.getFullYear()}`
-}
 
 const Page = (props: PageProps) => {
-  const article = findArticleById(props.params.id)
+  const dailyFeedback = dailyFeedbacks.find((dailyFeedback) => dailyFeedback.id === props.params.id)
 
-  if (!article) {
+  if (!dailyFeedback) {
     return <div>404</div>
   }
 
   return (
     <>
-      <Title posted={formatDate(article.posted)}>{article.title}</Title>
+      <Title posted={formatDate(dailyFeedback.posted)}>{dailyFeedback.title}</Title>
       <Heading as="h2">今日やったこと</Heading>
       <List>
-        {article.done.map((taskId) => {
-          const task = findTaskById(taskId)
+        {dailyFeedback.done.map((taskId) => {
+          const task = tasks.find((task) => task.id === taskId)
           if (!task) {
             return
           }
-          const marker = task.status === 'done' ? 'done' : 'dangerous'
           return (
-            <ListItem marker={marker} key={task.id}>
+            <ListItem marker="done" key={task.id}>
               {task.body}
             </ListItem>
           )
@@ -62,8 +46,8 @@ const Page = (props: PageProps) => {
 
       <Heading as="h2">明日やること</Heading>
       <List>
-        {article.todo.map((taskId) => {
-          const task = findTaskById(taskId)
+        {dailyFeedback.todo.map((taskId) => {
+          const task = tasks.find((task) => task.id === taskId)
           if (!task) {
             return
           }
@@ -72,7 +56,7 @@ const Page = (props: PageProps) => {
       </List>
 
       <Heading as="h2">今日学んだこと</Heading>
-      <Paragraph>{article.retrospective}</Paragraph>
+      <Markdown>{dailyFeedback.retrospective}</Markdown>
     </>
   )
 }

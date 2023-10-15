@@ -34,7 +34,7 @@
     "dev:blog:client": "pnpm --filter @okmtyuta/blog.me.okmtyuta.jp dev",
     "dev:blog": "pnpm dev:blog:client",
     "start:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp start:prod",
-    "build": "pnpm build:auth & pnpm build:about & pnpm build:console & pnpm build:blog",
+    "build": "pnpm build:auth && pnpm build:about && pnpm build:console && pnpm build:blog",
     "lint": "pnpm lint:auth & pnpm lint:about",
     "format": "pnpm prisma format & prettier --write ./"
   },
@@ -46,7 +46,6 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@okmtyuta/me.okmtyuta.jp.ui": "workspace:^",
     "@prisma/client": "^5.4.2",
     "prisma": "^5.4.2"
   }

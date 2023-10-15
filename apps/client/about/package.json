@@ -12,6 +12,7 @@
   "dependencies": {
     "@okmtyuta/amatelas": "^0.11.18",
     "@okmtyuta/awesome-css": "^0.0.2",
+    "@okmtyuta/me.okmtyuta.jp.ui": "workspace:^",
     "next": "^13.5.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
