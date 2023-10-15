@@ -1,6 +1,5 @@
 import { articles, findArticleById, findTaskById } from '@/db/blog/data'
 import { Heading, List, ListItem, Paragraph, Title } from '@okmtyuta/amatelas/server'
-import { Arima } from 'next/font/google'
 
 type Params = {
   id: string
