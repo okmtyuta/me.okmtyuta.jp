@@ -1,34 +1,45 @@
+type TaskId = string
+type TaskStatus = 'done' | 'pending'
 type Task = {
-  id: string
+  id: TaskId
   body: string
+  status: TaskStatus
 }
 type Article = {
   id: string
   title: string
   posted: Date
-  done: Task[]
-  todo: Task[]
-  learning: string
+  done: TaskId[]
+  todo: TaskId[]
+  retrospective: string
 }
+
+export const tasks: Task[] = [
+  {
+    id: '1',
+    body: '来週の講究の準備をする。',
+    status: 'done'
+  },
+  {
+    id: '2',
+    body: '内定先のイベントに参加する。',
+    status: 'done'
+  },
+  {
+    id: '3',
+    body: 'プールに行く',
+    status: 'pending'
+  },
+]
 
 export const articles: Article[] = [
   {
     id: '1',
     title: 'Daily Feedback',
     posted: new Date('2023-10-13'),
-    done: [
-      {
-        id: crypto.randomUUID(),
-        body: '来週の講究の準備をする。'
-      }
-    ],
-    todo: [
-      {
-        id: crypto.randomUUID(),
-        body: '内定先のイベントに参加する。'
-      }
-    ],
-    learning: '特になし'
+    done: ['1', "3"],
+    todo: ['2'],
+    retrospective: '特になし'
   },
   {
     id: '2',
@@ -36,7 +47,7 @@ export const articles: Article[] = [
     posted: new Date('2023-10-14'),
     done: [],
     todo: [],
-    learning: '特になし'
+    retrospective: '特になし'
   },
   {
     id: '3',
@@ -44,7 +55,7 @@ export const articles: Article[] = [
     posted: new Date('2023-10-15'),
     done: [],
     todo: [],
-    learning: '特になし'
+    retrospective: '特になし'
   }
 ]
 
@@ -54,4 +65,11 @@ export const findArticleById = (id: string) => {
   })
 
   return article
+}
+export const findTaskById = (id: string) => {
+  const task = tasks.find((task) => {
+    return task.id === id
+  })
+
+  return task
 }

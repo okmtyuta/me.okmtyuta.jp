@@ -1,4 +1,4 @@
-import { articles, findArticleById } from '@/db/blog/data'
+import { articles, findArticleById, findTaskById } from '@/db/blog/data'
 import { Heading, List, ListItem, Paragraph, Title } from '@okmtyuta/amatelas/server'
 import { Arima } from 'next/font/google'
 
@@ -47,9 +47,14 @@ const Page = (props: PageProps) => {
       <Title posted={formatDate(article.posted)}>{article.title}</Title>
       <Heading as="h2">今日やったこと</Heading>
       <List>
-        {article.done.map((task) => {
+        {article.done.map((taskId) => {
+          const task = findTaskById(taskId)
+          if (!task) {
+            return
+          }
+          const marker = task.status === 'done' ? 'done' : 'dangerous'
           return (
-            <ListItem marker="done" key={task.id}>
+            <ListItem marker={marker} key={task.id}>
               {task.body}
             </ListItem>
           )
@@ -58,17 +63,17 @@ const Page = (props: PageProps) => {
 
       <Heading as="h2">明日やること</Heading>
       <List>
-        {article.todo.map((task) => {
-          return (
-            <ListItem marker="dangerous" key={task.id}>
-              {task.body}
-            </ListItem>
-          )
+        {article.todo.map((taskId) => {
+          const task = findTaskById(taskId)
+          if (!task) {
+            return
+          }
+          return <ListItem key={task.id}>{task.body}</ListItem>
         })}
       </List>
 
       <Heading as="h2">今日学んだこと</Heading>
-      <Paragraph>{article.learning}</Paragraph>
+      <Paragraph>{article.retrospective}</Paragraph>
     </>
   )
 }
