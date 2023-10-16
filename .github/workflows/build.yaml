@@ -18,8 +18,8 @@ jobs:
       - name: Build About Client
         run: pnpm build:about:client
 
-      - name: Build Blog Client
-        run: pnpm build:blog:client
+      # - name: Build Blog Client
+      #   run: pnpm build:blog:client
 
       - name: Build Console Client
         run: pnpm build:console:client
