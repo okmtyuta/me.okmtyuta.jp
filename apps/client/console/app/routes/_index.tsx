@@ -19,7 +19,11 @@ export default function Index() {
         <Heading>Menu</Heading>
         <List>
           <ListItem>
-            <Link href="/create">Create New Feedback</Link>
+            <Link href="/daily-feedbacks">Daily Feedbacks</Link>
+          </ListItem>
+
+          <ListItem>
+            <Link href="/daily-feedbacks/create">Create New Daily Feedback</Link>
           </ListItem>
         </List>
       </Frame>

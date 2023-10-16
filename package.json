@@ -34,8 +34,8 @@
     "dev:blog:client": "pnpm --filter @okmtyuta/blog.me.okmtyuta.jp dev",
     "dev:blog": "pnpm dev:blog:client",
     "start:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp start:prod",
-    "build": "pnpm build:auth && pnpm build:about && pnpm build:console && pnpm build:blog",
-    "lint": "pnpm lint:auth & pnpm lint:about",
+    "build": "pnpm build:about && pnpm build:console && pnpm build:blog",
+    "lint": "pnpm lint:about & pnpm lint:console & pnpm lint:blog",
     "format": "pnpm prisma format & prettier --write ./"
   },
   "keywords": [],

@@ -7,21 +7,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Account {
-  id       Int    @id @default(autoincrement())
-  User     User?
-  password String
-}
-
-model User {
-  id        Int     @id @default(autoincrement())
-  username  String  @unique
-  account   Account @relation(fields: [accountId], references: [id])
-  accountId Int     @unique
-}
-
-model Feedback {
-  id      Int    @id @default(autoincrement())
-  summary String
-  body    String
+model DailyFeedback {
+  id            Int      @id @default(autoincrement())
+  title         String
+  posted        DateTime
+  retrospective String
 }
