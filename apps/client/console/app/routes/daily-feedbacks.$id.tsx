@@ -44,7 +44,7 @@ export default function Index() {
           </Link>
         </Paragraph>
         <Paragraph>
-          <Link color="danger" to="" tag={RemixLink}>
+          <Link color="danger" to={`/daily-feedbacks/delete/${dailyFeedback.id}`} tag={RemixLink}>
             Delete Feedback
           </Link>
         </Paragraph>

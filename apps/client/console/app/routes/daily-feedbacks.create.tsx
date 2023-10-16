@@ -1,7 +1,7 @@
 import { redirect, type ActionFunction, type MetaFunction } from '@remix-run/node'
 
 import { Footer, Header } from '@okmtyuta/me.okmtyuta.jp.ui'
-import { Frame, Textarea, Button, Title, TextField } from '@okmtyuta/amatelas/server'
+import { Frame, Textarea, Button, Title, TextField, Flex } from '@okmtyuta/amatelas/server'
 
 import '@okmtyuta/awesome-css/reset.css'
 import '@okmtyuta/amatelas/style.css'
@@ -42,9 +42,11 @@ export default function Index() {
         <Title>Create Daily Feedback</Title>
 
         <form method="post">
-          <TextField validate required name="title" placeholder="タイトル"></TextField>
-          <Textarea validate required name="retrospective" placeholder="レトロスペクティブ"></Textarea>
-          <Button type="submit">SUBMIT</Button>
+          <Flex as="div">
+            <TextField validate required name="title" placeholder="タイトル"></TextField>
+            <Textarea validate required name="retrospective" placeholder="レトロスペクティブ"></Textarea>
+            <Button type="submit">SUBMIT</Button>
+          </Flex>
         </form>
       </Frame>
       <Footer />

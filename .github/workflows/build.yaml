@@ -15,12 +15,6 @@ jobs:
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
 
-      # - name: Build Auth API
-      #   run: pnpm build:auth:api
-
-      # - name: Build Auth Client
-      #   run: pnpm build:auth:client
-
       - name: Build About Client
         run: pnpm build:about:client
 

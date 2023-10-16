@@ -4,9 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:auth:client": "pnpm --filter @okmtyuta/auth.me.okmtyuta.jp build",
-    "build:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp build",
-    "build:auth": "pnpm build:auth:client & pnpm build:auth:api",
     "build:about:client": "pnpm --filter @okmtyuta/about.me.okmtyuta.jp build",
     "build:about": "pnpm build:about:client",
     "build:console:client": "pnpm --filter @okmtyuta/console.me.okmtyuta.jp build",
@@ -14,26 +11,20 @@
     "build:blog:client": "pnpm --filter @okmtyuta/blog.me.okmtyuta.jp build",
     "build:blog": "pnpm build:blog:client",
     "build:packages:ui": "pnpm --filter @okmtyuta/me.okmtyuta.jp.ui build",
+    "build:packages:prisma": "pnpm --filter @okmtyuta/me.okmtyuta.jp.prisma build",
     "build:packages": "pnpm build:packages:ui",
-    "lint:auth:client": "pnpm --filter @okmtyuta/auth.me.okmtyuta.jp lint",
-    "lint:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp lint",
-    "lint:auth": "pnpm lint:auth:api & pnpm lint:auth:client",
     "lint:about:client": "pnpm --filter @okmtyuta/about.me.okmtyuta.jp lint",
     "lint:about": "pnpm lint:about:client",
     "lint:console:client": "pnpm --filter @okmtyuta/console.me.okmtyuta.jp lint",
     "lint:console": "pnpm lint:console:client",
     "lint:blog:client": "pnpm --filter @okmtyuta/blog.me.okmtyuta.jp lint",
     "lint:blog": "pnpm lint:blog:client",
-    "dev:auth:client": "pnpm --filter @okmtyuta/auth.me.okmtyuta.jp dev",
-    "dev:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp dev",
-    "dev:auth": "pnpm dev:auth:api & pnpm dev:auth:client",
     "dev:about:client": "pnpm --filter @okmtyuta/about.me.okmtyuta.jp dev",
     "dev:about": "pnpm dev:about:client",
     "dev:console:client": "pnpm --filter @okmtyuta/console.me.okmtyuta.jp dev",
     "dev:console": "pnpm dev:console:client",
     "dev:blog:client": "pnpm --filter @okmtyuta/blog.me.okmtyuta.jp dev",
     "dev:blog": "pnpm dev:blog:client",
-    "start:auth:api": "pnpm --filter @okmtyuta/auth.api.me.okmtyuta.jp start:prod",
     "build": "pnpm build:about && pnpm build:console && pnpm build:blog",
     "lint": "pnpm lint:about & pnpm lint:console & pnpm lint:blog",
     "format": "pnpm prisma format & prettier --write ./"
@@ -45,8 +36,5 @@
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   },
-  "dependencies": {
-    "@prisma/client": "^5.4.2",
-    "prisma": "^5.4.2"
-  }
+  "dependencies": {}
 }

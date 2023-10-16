@@ -1,7 +1,7 @@
 import { redirect, type ActionFunction, type MetaFunction, json } from '@remix-run/node'
 
 import { Footer, Header } from '@okmtyuta/me.okmtyuta.jp.ui'
-import { Frame, Textarea, Button, Title, TextField, Flex } from '@okmtyuta/amatelas/server'
+import { Frame, Button, Title, Flex } from '@okmtyuta/amatelas/server'
 
 import '@okmtyuta/awesome-css/reset.css'
 import '@okmtyuta/amatelas/style.css'
@@ -31,29 +31,21 @@ export const loader = async ({ params }: { params: { id: string } }) => {
   })
 }
 
-export const action: ActionFunction = async ({ params, request }) => {
-  const body = await request.formData()
+export const action: ActionFunction = async ({ params }) => {
   const id = params.id
-  const title = body.get('title')
-  const retrospective = body.get('retrospective')
 
-  if (typeof title === 'string' && typeof retrospective === 'string' && typeof id === 'string') {
+  if (id) {
     const prisma = await new PrismaClient()
-    const dailyFeedback = await prisma.dailyFeedback.update({
+    await prisma.dailyFeedback.delete({
       where: {
         id: Number(id)
-      },
-      data: {
-        title,
-        retrospective,
-        posted: new Date()
       }
     })
     await prisma.$disconnect()
-    return redirect(`/daily-feedbacks/${dailyFeedback.id}`)
+    return redirect('/daily-feedbacks')
   }
 
-  return 'null'
+  return null
 }
 
 export default function Index() {
@@ -63,23 +55,16 @@ export default function Index() {
     return <div>404</div>
   }
 
-  console.log(dailyFeedback)
   return (
     <>
       <Header label="okmtyuta console" />
       <Frame>
-        <Title>Edit {dailyFeedback.title}</Title>
+        <Title>Delete {dailyFeedback.title}</Title>
         <form method="post">
-          <Flex as="div">
-            <TextField validate required name="title" placeholder="タイトル" defaultValue={dailyFeedback.title} />
-            <Textarea
-              validate
-              required
-              name="retrospective"
-              placeholder="レトロスペクティブ"
-              defaultValue={dailyFeedback.retrospective}
-            />
-            <Button type="submit">SUBMIT</Button>
+          <Flex align="center" as="div">
+            <Button width="md" variant="filled" color="danger" type="submit">
+              DELETE
+            </Button>
           </Flex>
         </form>
       </Frame>
