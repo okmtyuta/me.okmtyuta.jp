@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "pnpm --filter @okmtyuta/me.okmtyuta.jp.ui build",
+    "prebuild": "pnpm --filter @okmtyuta/me.okmtyuta.jp.prisma build && pnpm --filter @okmtyuta/me.okmtyuta.jp.ui build",
     "dev": "next dev",
     "build": "pnpm prebuild && next build",
     "start": "next start",
