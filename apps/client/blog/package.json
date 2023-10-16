@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "pnpm --filter @okmtyuta/me.okmtyuta.jp.ui build",
+    "prebuild": "pnpm --filter @okmtyuta/me.okmtyuta.jp.prisma build && pnpm --filter @okmtyuta/me.okmtyuta.jp.ui build",
     "build": "pnpm prebuild && next build",
     "start": "next start",
     "lint": "next lint"
