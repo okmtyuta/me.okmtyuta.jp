@@ -4,7 +4,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "prebuild": "pnpm --filter @okmtyuta/me.okmtyuta.jp.ui build",
+    "prebuild": "pnpm --filter @okmtyuta/me.okmtyuta.jp.ui build & pnpm --filter @okmtyuta/me.okmtyuta.jp.prisma build",
     "build": "pnpm prebuild && remix build",
     "dev": "remix dev --manual",
     "start": "remix-serve ./build/index.js",
@@ -14,6 +14,7 @@
   "dependencies": {
     "@okmtyuta/amatelas": "^0.11.20",
     "@okmtyuta/awesome-css": "^0.0.2",
+    "@okmtyuta/me.okmtyuta.jp.prisma": "workspace:^",
     "@okmtyuta/me.okmtyuta.jp.ui": "workspace:^",
     "@remix-run/css-bundle": "^2.0.1",
     "@remix-run/node": "^2.0.1",

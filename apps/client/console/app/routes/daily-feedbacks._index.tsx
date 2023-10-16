@@ -3,11 +3,12 @@ import { type MetaFunction } from '@remix-run/node'
 import { Footer, Header } from '@okmtyuta/me.okmtyuta.jp.ui'
 import { Frame, Title, List, ListItem, Link } from '@okmtyuta/amatelas/server'
 
+import { PrismaClient } from '@okmtyuta/me.okmtyuta.jp.prisma'
+
 import '@okmtyuta/awesome-css/reset.css'
 import '@okmtyuta/amatelas/style.css'
 import '@okmtyuta/me.okmtyuta.jp.ui/style.css'
 
-import { PrismaClient } from '@prisma/client'
 import { Link as RemixLink, useLoaderData } from '@remix-run/react'
 
 export const meta: MetaFunction = () => {

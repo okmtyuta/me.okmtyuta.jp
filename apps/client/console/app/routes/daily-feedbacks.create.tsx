@@ -7,7 +7,7 @@ import '@okmtyuta/awesome-css/reset.css'
 import '@okmtyuta/amatelas/style.css'
 import '@okmtyuta/me.okmtyuta.jp.ui/style.css'
 
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from '@okmtyuta/me.okmtyuta.jp.prisma'
 
 export const meta: MetaFunction = () => {
   return [{ title: 'okmtyuta console | Daily Feedback Create' }, { name: 'description', content: 'Welcome to Remix!' }]

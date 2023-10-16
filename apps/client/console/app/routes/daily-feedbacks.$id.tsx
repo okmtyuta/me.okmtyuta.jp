@@ -7,7 +7,7 @@ import '@okmtyuta/awesome-css/reset.css'
 import '@okmtyuta/amatelas/style.css'
 import '@okmtyuta/me.okmtyuta.jp.ui/style.css'
 
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from '@okmtyuta/me.okmtyuta.jp.prisma'
 import { Link as RemixLink, useLoaderData } from '@remix-run/react'
 
 export const meta: MetaFunction = () => {
