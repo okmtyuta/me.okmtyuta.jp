@@ -10,20 +10,22 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "13.5.4",
     "@okmtyuta/amatelas": "^0.11.18",
-    "@okmtyuta/me.okmtyuta.jp.ui": "workspace:^",
+    "@okmtyuta/amatelas-markdown": "^0.0.2",
     "@okmtyuta/awesome-css": "^0.0.2",
-    "@okmtyuta/amatelas-markdown": "^0.0.2"
+    "@okmtyuta/me.okmtyuta.jp.prisma": "workspace:^",
+    "@okmtyuta/me.okmtyuta.jp.ui": "workspace:^",
+    "next": "13.5.4",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@prisma/nextjs-monorepo-workaround-plugin": "^5.4.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "13.5.4"
+    "eslint-config-next": "13.5.4",
+    "typescript": "^5"
   }
 }

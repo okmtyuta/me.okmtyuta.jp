@@ -27,7 +27,7 @@
     "dev:blog": "pnpm dev:blog:client",
     "build": "pnpm build:about && pnpm build:console && pnpm build:blog",
     "lint": "pnpm lint:about & pnpm lint:console & pnpm lint:blog",
-    "format": "pnpm prisma format & prettier --write ./"
+    "format": "pnpm --filter @okmtyuta/me.okmtyuta.jp.prisma format & prettier --write ./"
   },
   "keywords": [],
   "author": "",

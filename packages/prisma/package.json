@@ -6,7 +6,8 @@
   "types": "dist/types/index.d.js",
   "scripts": {
     "generate": "prisma generate",
-    "build": "pnpm generate && tsc"
+    "build": "pnpm generate && tsc",
+    "format": "pnpm prisma format"
   },
   "keywords": [],
   "author": "",
