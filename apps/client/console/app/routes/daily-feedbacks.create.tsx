@@ -45,7 +45,9 @@ export default function Index() {
           <Flex as="div">
             <TextField validate required name="title" placeholder="タイトル"></TextField>
             <Textarea validate required name="retrospective" placeholder="レトロスペクティブ"></Textarea>
-            <Button type="submit">SUBMIT</Button>
+            <Button color="info" variant="filled" type="submit">
+              SUBMIT
+            </Button>
           </Flex>
         </form>
       </Frame>

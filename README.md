@@ -3,7 +3,7 @@
 - https://auth.api.me.okmtyuta.jp: 認証用のREST API with NestJS @ https://render.com
 - https://auth.me.okmtyuta.jp: 認証関連のページ with Next.js @ https://vercel.com
 - https://console.api.me.okmtyuta.jp: コンソール用のAPI // 未作成
-- https://comnole.me.okmtyuta.jp: コンソール系のページ with Remix @ https://render.com
+- https://console.me.okmtyuta.jp: コンソール系のページ with Remix @ https://render.com
 - https://blog.api.me.okmtyuta.jp: ブログのAPI // 未作成
 - https://blog.me.okmtyuta.jp: ブログのページ with Next.js // 未作成
 - https://about.me.okmtyuta.jp: about専用のstatic page with Next.js @ https://render.com
