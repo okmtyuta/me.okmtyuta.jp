@@ -2,6 +2,7 @@ import { type MetaFunction } from '@remix-run/node'
 
 import { Footer, Header } from '@okmtyuta/me.okmtyuta.jp.ui'
 import { Frame, Title, Paragraph, Link } from '@okmtyuta/amatelas/server'
+import { Markdown } from '@okmtyuta/amatelas-markdown'
 
 import '@okmtyuta/awesome-css/reset.css'
 import '@okmtyuta/amatelas/style.css'
@@ -37,7 +38,7 @@ export default function Index() {
       <Header label="okmtyuta console" />
       <Frame>
         <Title>{dailyFeedback.title}</Title>
-        <Paragraph>{dailyFeedback.retrospective}</Paragraph>
+        <Markdown>{dailyFeedback.retrospective}</Markdown>
         <Paragraph>
           <Link color="info" to={`/daily-feedbacks/edit/${dailyFeedback.id}`} tag={RemixLink}>
             Edit Feedback
