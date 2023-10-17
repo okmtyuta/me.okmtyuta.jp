@@ -11,6 +11,8 @@ const fetchDailyFeedbacks = async () => {
   return dailyFeedbacks
 }
 
+export const dynamic = 'force-dynamic'
+
 const Page = async () => {
   const dailyFeedbacks = await fetchDailyFeedbacks()
 

@@ -1,6 +1,6 @@
 import { Markdown } from '@okmtyuta/amatelas-markdown'
 import { Title } from '@okmtyuta/amatelas/server'
-import { PrismaClient } from '@okmtyuta/me.okmtyuta.jp.prisma'
+import { DailyFeedback, PrismaClient } from '@okmtyuta/me.okmtyuta.jp.prisma'
 
 type Params = {
   id: string
@@ -9,33 +9,21 @@ type PageProps = {
   params: Params
 }
 
-export const generateStaticParams = async (): Promise<Params[]> => {
-  const prisma = await new PrismaClient()
-
-  const dailyFeedbacks = await prisma.dailyFeedback.findMany()
-  await prisma.$disconnect()
-  return dailyFeedbacks.map((dailyFeedback) => {
-    return {
-      id: dailyFeedback.id.toString()
-    }
-  })
-}
-export const dynamicParams = false
-
-const fetchDailyFeedback = async (id: number) => {
+const fetchDailyFeedback = async (params: Params) => {
   const prisma = await new PrismaClient()
   const dailyFeedback = await prisma.dailyFeedback.findUnique({
     where: {
-      id: id
+      id: Number(params.id)
     }
   })
   await prisma.$disconnect()
 
   return dailyFeedback
 }
+export const dynamic = 'force-dynamic'
 
 const Page = async (props: PageProps) => {
-  const dailyFeedback = await fetchDailyFeedback(Number(props.params.id))
+  const dailyFeedback = await fetchDailyFeedback(props.params)
 
   if (!dailyFeedback) {
     return <div>404</div>
