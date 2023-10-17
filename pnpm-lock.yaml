@@ -107,8 +107,8 @@ importers:
   apps/client/console:
     dependencies:
       '@okmtyuta/amatelas':
-        specifier: ^0.11.22
-        version: 0.11.22(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.0)
+        specifier: ^0.11.24
+        version: 0.11.24(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.0)
       '@okmtyuta/amatelas-markdown':
         specifier: ^0.0.2
         version: 0.0.2(@types/react@18.2.24)(clsx@2.0.0)(styled-components@6.1.0)
@@ -1444,8 +1444,8 @@ packages:
       styled-components: 6.1.0(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /@okmtyuta/amatelas@0.11.22(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.0):
-    resolution: {integrity: sha512-B96UaA5YKICWzCc0xd2Ls2CKBlWrB7lmwHmGykW/4C7dWnjzah/OHxS6yatTHL/zy+xVAB546Bidwp2t48dYCQ==}
+  /@okmtyuta/amatelas@0.11.24(clsx@2.0.0)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.0):
+    resolution: {integrity: sha512-D5tYQBGkjUJab3/DxZHl0uHJNrN+2D4ikEIw5fCSsm5qk3GbYjEDmhTso5AL6wcjH3Y38WZ1pIgCZxY0FhfZFA==}
     peerDependencies:
       clsx: ^2.0.0
       react: ^18.2.0

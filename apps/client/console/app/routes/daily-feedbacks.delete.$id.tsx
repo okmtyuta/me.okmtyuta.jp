@@ -1,34 +1,18 @@
-import { redirect, type ActionFunction, type MetaFunction, json } from '@remix-run/node'
+import { ActionFunction, redirect, type MetaFunction } from '@remix-run/node'
 
 import { Footer, Header } from '@okmtyuta/me.okmtyuta.jp.ui'
-import { Frame, Button, Title, Flex } from '@okmtyuta/amatelas/server'
+import { Frame, Title, Paragraph, Link, Modal, Button, Flex } from '@okmtyuta/amatelas/server'
+import { Markdown } from '@okmtyuta/amatelas-markdown'
 
 import '@okmtyuta/awesome-css/reset.css'
 import '@okmtyuta/amatelas/style.css'
 import '@okmtyuta/me.okmtyuta.jp.ui/style.css'
 
 import { PrismaClient } from '@okmtyuta/me.okmtyuta.jp.prisma'
-import { useLoaderData } from '@remix-run/react'
+import { Link as RemixLink, useLoaderData } from '@remix-run/react'
 
 export const meta: MetaFunction = () => {
   return [{ title: 'okmtyuta console | Daily Feedback Create' }, { name: 'description', content: 'Welcome to Remix!' }]
-}
-
-export const loader = async ({ params }: { params: { id: string } }) => {
-  const prisma = new PrismaClient()
-  const dailyFeedback = await prisma.dailyFeedback.findUnique({
-    where: {
-      id: Number(params.id)
-    }
-  })
-  await prisma.$disconnect()
-
-  return json({
-    title: dailyFeedback?.title,
-    id: dailyFeedback?.id.toString(),
-    posted: dailyFeedback?.posted.toDateString(),
-    retrospective: dailyFeedback?.retrospective
-  })
 }
 
 export const action: ActionFunction = async ({ params }) => {
@@ -48,6 +32,17 @@ export const action: ActionFunction = async ({ params }) => {
   return null
 }
 
+export const loader = async ({ params }: { params: { id: string } }) => {
+  const prisma = new PrismaClient()
+  const dailyFeedbacks = await prisma.dailyFeedback.findUnique({
+    where: {
+      id: Number(params.id)
+    }
+  })
+  await prisma.$disconnect()
+  return dailyFeedbacks
+}
+
 export default function Index() {
   const dailyFeedback = useLoaderData<typeof loader>()
 
@@ -59,14 +54,33 @@ export default function Index() {
     <>
       <Header label="okmtyuta console" />
       <Frame>
-        <Title>Delete {dailyFeedback.title}</Title>
-        <form method="post">
-          <Flex align="center" as="div">
-            <Button width="md" variant="filled" color="danger" type="submit">
-              DELETE
-            </Button>
+        <Modal open>
+          <Flex>
+            <div>Are you sure you want to delete it?</div>
+            <form method="POST">
+              <Flex justify="flex-start" direction="row">
+                <Button type="submit" color="danger" variant="filled">
+                  DELETE
+                </Button>
+                <Button color="info" as={RemixLink} to={`/daily-feedbacks/${dailyFeedback.id}`}>
+                  DECLINE
+                </Button>
+              </Flex>
+            </form>
           </Flex>
-        </form>
+        </Modal>
+        <Title>{dailyFeedback.title}</Title>
+        <Markdown>{dailyFeedback.retrospective}</Markdown>
+        <Paragraph>
+          <Link color="info" to={`/daily-feedbacks/edit/${dailyFeedback.id}`} tag={RemixLink}>
+            Edit Feedback
+          </Link>
+        </Paragraph>
+        <Paragraph>
+          <Link color="danger" to={`/daily-feedbacks/delete/${dailyFeedback.id}`} tag={RemixLink}>
+            Delete Feedback
+          </Link>
+        </Paragraph>
       </Frame>
       <Footer />
     </>
