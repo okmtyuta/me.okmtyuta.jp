@@ -15,7 +15,7 @@
     "@okmtyuta/awesome-css": "^0.0.2",
     "@okmtyuta/me.okmtyuta.jp.prisma": "workspace:^",
     "@okmtyuta/me.okmtyuta.jp.ui": "workspace:^",
-    "next": "13.5.6",
+    "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -25,7 +25,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "13.5.6",
+    "eslint-config-next": "14.0.2",
     "typescript": "^5"
   },
   "engines": {
