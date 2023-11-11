@@ -118,8 +118,6 @@ const Page = () => {
           : October 2023 - Current, Software Engineer, Internship
         </ListItem>
       </List>
-
-      <Link href="https://blog.me.okmtyuta.jp">Diary</Link>
     </>
   )
 }
