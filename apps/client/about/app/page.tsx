@@ -1,5 +1,4 @@
 import { Heading, Paragraph, Typography, List, ListItem } from '@okmtyuta/amatelas/server'
-import Link from 'next/link'
 
 const Page = () => {
   return (
