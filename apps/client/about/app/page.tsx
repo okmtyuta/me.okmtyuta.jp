@@ -1,4 +1,5 @@
-import { Heading, Paragraph, Typography, List, ListItem } from '@okmtyuta/amatelas/server'
+import { Heading, Paragraph, Typography, List, ListItem, Link } from '@okmtyuta/amatelas/server'
+import NextLink from "next/link"
 
 const Page = () => {
   return (
@@ -83,12 +84,12 @@ const Page = () => {
       <Heading>Experiences</Heading>
 
       <Paragraph>
-        学外ではソフトウェアエンジニアとして活動してきました。機械学習やUI/UXデザインの領域でも価値を出していきたいと思っています。
+        学外ではソフトウェアエンジニアとして活動してきました。機械学習やUI/UXデザインの領域でも価値を出していきたいと思っています。詳しい経験については，<Link underlined tag={NextLink} href="experiences">Experiences</Link>のページをご覧ください。
       </Paragraph>
 
       <Paragraph>
         I have worked as software engineer. From now on, I would like to be active in the areas of not only software,
-        but also Machine Learning and UI/UX design.
+        but also Machine Learning and UI/UX design. See <Link underlined tag={NextLink} href="experiences">Experiences</Link> page for more information.
       </Paragraph>
 
       <List>
