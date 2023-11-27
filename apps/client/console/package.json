@@ -12,7 +12,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@okmtyuta/amatelas": "^0.11.24",
+    "@okmtyuta/amatelas": "^0.12.0",
     "@okmtyuta/amatelas-markdown": "^0.0.2",
     "@okmtyuta/awesome-css": "^0.0.2",
     "@okmtyuta/me.okmtyuta.jp.prisma": "workspace:^",
