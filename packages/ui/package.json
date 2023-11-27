@@ -43,7 +43,7 @@
     "@vitejs/plugin-react-swc": "^3.4.0",
     "sass": "^1.69.3",
     "tsc-alias": "^1.8.8",
-    "vite": "^4.4.11",
+    "vite": "^5.0.0",
     "vitest": "^0.34.6"
   },
   "dependencies": {
@@ -62,7 +62,7 @@
     "react-dom": "^18.2.0",
     "sass": "^1.68.0",
     "tsc-alias": "^1.8.8",
-    "vite": "^4.4.9",
+    "vite": "^4.4.9 || ^5.0.0",
     "vitest": "^0.34.5"
   },
   "sideEffects": [
