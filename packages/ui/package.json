@@ -44,7 +44,7 @@
     "sass": "^1.69.3",
     "tsc-alias": "^1.8.8",
     "vite": "^4.4.11",
-    "vitest": "^0.34.6"
+    "vitest": "^1.0.0"
   },
   "dependencies": {
     "@okmtyuta/amatelas": "^0.11.15",
@@ -63,7 +63,7 @@
     "sass": "^1.68.0",
     "tsc-alias": "^1.8.8",
     "vite": "^4.4.9",
-    "vitest": "^0.34.5"
+    "vitest": "^0.34.5 || ^1.0.0"
   },
   "sideEffects": [
     "*.css"
