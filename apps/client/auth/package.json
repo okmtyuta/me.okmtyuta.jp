@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@okmtyuta/amatelas-react": "^0.0.1",
+    "@okmtyuta/amatelas-react": "^0.0.30",
     "@okmtyuta/awesome-css": "^0.0.2",
     "next": "14.0.2",
     "react": "^18",
